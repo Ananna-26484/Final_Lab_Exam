@@ -1,52 +1,36 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-else{
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // collect value of input field
-  $name = $_POST['name'];
-  $email=$_POST['email'];
-  $password=$_POST['password'];
-  $gender=$_POST['gender'];
-  $dob=$_POST['birthday'];
-  $type=$_POST['type'];
+if(isset($_GET['submit']))
+{
   
-  
-  
-
-$sql = "INSERT INTO users(name,email,type,password,gender,birthday)
-VALUES ('".$name."','".$email."','".$type."','".$password."','".$gender."','".$dob."')";
-
-
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    $name=$_GET['username'];
+  if(strlen($name)>0)
+  {
+    echo"Name:  ";
+        echo $name ;      
+    
   }
+  else
+  {
+    echo "Name can not be empty";
+    }   
+      
+}
+
+if(isset($_GET['submit']))
+{
   
-  $conn->close();
-
-
+    $email=$_GET['email'];
+  if(strlen($email)>0)
+  {
+    echo"Email:  ";
+        echo $email ;      
+    
+  }
+  else
+  {
+    echo "email can not be empty";
+    }   
+      
 }
-
-
-
-
-
-}
-
 
 ?>

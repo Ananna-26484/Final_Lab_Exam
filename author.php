@@ -31,7 +31,8 @@ VALUES ('".$name."','".$number."','".$username."','".$password."')";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Author record created successfully";
+    ///echo "Author record created successfully";
+    header("location:view-author.php");
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
