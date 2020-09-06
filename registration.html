@@ -1,0 +1,46 @@
+<html>
+  <head>
+     <title>Registration Page</title>
+   </head>
+        <body>
+
+           <fieldset>
+                 <form method="post" action="registration.php">
+                 <Legend><b>Registration Page</b></Legend>
+				 
+				 <br><br>
+
+                 <b>Name:</b> <input type="name" name="name"> <br> <br>
+				 
+				 <b>Email:</b> <input type="email" name="email"> <br> <br>
+				 
+				  <b>Password:</b> <input type="password" name="password"> <br> <br>
+
+                 <p><b>Please select your gender:</b></p>
+                 <input type="radio" id="male" name="gender" value="male">
+                 <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                 <label for="female">Female</label><br> <br>
+				 
+				  <label for="birthday"><b>Date of Birth:</b></label>
+                 <input type="date" name="birthday"> <br><br>
+				 
+				 <label for="cars"><b>User Type:</b></label>
+                <select name="type">
+              <option value="super-admin">Super Admin</option>
+              <option value="admin">Admin</option>
+            <option value="user">User</option>
+            
+                     </select>
+					 
+					 <br><br>
+                  
+			<input type="submit" value="register">	  
+
+
+          </fieldset>		   
+        </form>
+
+        </body>
+ </html>		
+	    
