@@ -1,102 +1,46 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Final Term Lab Task 3</title>
-  
-  <script type="text/javascript">
-    "use strict"
+  <head>
+     <title>Registration Page</title>
+   </head>
+        <body>
 
-    function validate(){
+           <fieldset>
+                 <form method="post" action="registration.php">
+                 <Legend><b>Registration Page</b></Legend>
+				 
+				 <br><br>
 
-      var username = document.getElementById('username').value;
-      var email = document.getElementById('email').value;
-      
-      if(username == ""){
-        document.getElementById('userMsg').innerHTML = "username can't left empty";
-        return false;
-      } 
-      else if(email == ""){
-        document.getElementById('userMsg').innerHTML = "* email can't left empty";
-        return false;
-      }
-      else{
-        return true;
-      }
+                 <b>Name:</b> <input type="name" name="name"> <br> <br>
+				 
+				 <b>Email:</b> <input type="email" name="email"> <br> <br>
+				 
+				  <b>Password:</b> <input type="password" name="password"> <br> <br>
 
-    }
+                 <p><b>Please select your gender:</b></p>
+                 <input type="radio" id="male" name="gender" value="male">
+                 <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                 <label for="female">Female</label><br> <br>
+				 
+				  <label for="birthday"><b>Date of Birth:</b></label>
+                 <input type="date" name="birthday"> <br><br>
+				 
+				 <label for="cars"><b>User Type:</b></label>
+                <select name="type">
+              <option value="super-admin">Super Admin</option>
+              <option value="admin">Admin</option>
+            <option value="user">User</option>
+            
+                     </select>
+					 
+					 <br><br>
+                  
+			<input type="submit" value="register">	  
 
-    function remover(){
-      document.getElementById('userMsg').innerHTML = "";
-      document.getElementById('emailMsg').innerHTML = "";
-    }
 
-    function blurmsg(){
+          </fieldset>		   
+        </form>
 
-      if(document.getElementById('username').value == "" ){
-        document.getElementById('userMsg').innerHTML = "* this field is required!";   
-      }
-      if( document.getElementById('email').value == ""){    
-        document.getElementById('emailMsg').innerHTML = "* this field is required!";
-      }
-      
-    }
-  </script>
-
-</head>
-<body>
-
-  <h1>PERSON PROFILE</h1>
-  <form action="check.php" onsubmit="return validate()">
-    <fieldset>
-      <legend>SIGNUP</legend>
-    
-    <table>
-      <tr>
-        <td>Name : </td>                
-        <td><input type="text" id="username" name="username" onkeyup="remover()" onblur="blurmsg()" /></td>
-        <td id="userMsg"> </td>
-      </tr>
-
-      <tr>
-        <td>Email : </td>               
-        <td><input type="email" id="email" name="email" onkeyup="remover()" onblur="blurmsg()" /></td>
-        <td id="emailMsg"> </td>
-      </tr>
-      <tr>
-        <td>Contuct number : </td>                
-        <td><input type="text" id="contnumber" name="contnumber" onkeyup="remover()" onblur="blurmsg()" /></td>
-        <td id="contnumberMsg"> </td>
-      </tr>
-
-      <tr>
-        <td>Gender : </td>        
-        <td>
-          <input type="radio" name="gender" id="male" value="Male"><label>Male</label>
-              <input type="radio" name="gender" id="female" value="Female"><label>Female</label>
-              <input type="radio" name="gender" id="other" value="Other"><label>other</label>
-        </td>
-        <td id="genderMsg"> </td>
-      </tr>
-
-      <tr>
-        <td>Date of birth : </td>     
-          <td>
-              <input type="text" id='date' name="date" value="" onkeyup="remover()" onblur="Name()" /> /
-              <input type="text" id="month" name="month" value="" onkeyup="remover()" onblur="Name()" /> /
-              <input type="text" id="year" name="year" value="" onkeyup="remover()" onblur="Name()" /> (dd/mm/yyyy)
-          </td>
-          <td id="dobMsg"> </td>
-      </tr> 
-
-      <tr>  
-        <td></td>             
-        <td>
-          <input type="submit" name="submit" value="Submit">
-          <button type="button" name="resetbtn">Reset</button>
-        </td>
-      </tr>
-    </table>
-    </fieldset>
-  </form>
-</body>
-</html>
+        </body>
+ </html>		
+	    

@@ -33,15 +33,16 @@ if ($result->num_rows > 0) {
         $name = $row["name"];
         $number = $row["number"];
         $username = $row["username"];
+        $id=$row["id"];
 
 
         echo '<tr> 
         <td>'.$name.'</td> 
         <td>'.$number.'</td> 
         <td>'.$username.'</td> 
-        <td> <a href="#">Delete</a></td>
-        <td><a href="#">Edit</a></td>
-        
+        <td> <a href="delete.php?id=<?php echo $id; ?>">Delete</a></td>
+        <td><a href="edit.php?id=<?php echo $id; ?>">Edit</a></td>
+        <td> <br> </td>
     </tr>';
 }
 
