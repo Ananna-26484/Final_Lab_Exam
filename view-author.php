@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         $name = $row["name"];
         $number = $row["number"];
         $username = $row["username"];
-        $id=$row["id"];
+       //// $id=$row["id"];
 
 
         echo '<tr> 

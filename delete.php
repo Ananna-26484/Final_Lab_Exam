@@ -1,29 +1,16 @@
 <?php
-/*$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "myDB";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+  mysql_connect("localhost","root","");
+	mysql_select_db("eisty");
+  $id=$_POST['id'];
+  $query = "delete from authors where date='$a'";
+	
+	if(mysql_query($query)){
+		
+		
+		header("location:view-author.php");
+		
+		
+	}
 
-// sql to delete a record
-$sql = "DELETE FROM MyGuests WHERE id=3";
-
-if (mysqli_query($conn, $sql)) {
-  echo "Record deleted successfully";
-} else {
-  echo "Error deleting record: " . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-
-
-*/
-
-echo $id;
 ?>
